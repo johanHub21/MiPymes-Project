@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>CRUD - Discografía</title>
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/estilo.css">
+</head>
+<body background="css/fondo.png" >
+	<div class="container-fluid">
+		<h1>~Discografía~</h1>	
+		<div class="row">
+			<div class="col-12 col-sm-6 col-md-3">
+				<div class="formulario">
+					<h2>Categoría</h2>
+					<form id="categoria">	<!--Formulario Categoría-->
+						<div class="form-group">
+							<input type="hidden" class="form-control" id="codCategoria">	<!--Llave Primaria-->
+							<label for="nomCategoria">Nombre Categoría</label>
+							<input type="text" class="form-control" id="nomCategoria" placeholder="Ingrese el nombre de la categoría">
+						</div>
+					</form>
+					<div class="form-group">
+						<button type="submit" class="btn btn-outline-primary" id="desp" onclick="navPrimeroCategoria()">|<</button>
+						<button type="submit" class="btn btn-outline-primary" id="desp" onclick="navAtrasCategoria()"><</button>
+						<button type="submit" class="btn btn-outline-primary" id="desp" onclick="navAdelanteCategoria()">></button>
+						<button type="submit" class="btn btn-outline-primary" id="desp" onclick="navUltimoCategoria()">>|</button>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-outline-primary" id="opc1" onclick="crearCategoria()">Crear</button>
+						<button type="submit" class="btn btn-outline-success" id="opc2">Modificar</button>
+						<button type="submit" class="btn btn-outline-danger" id="opc3">Eliminar</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-md-3">
+				<div class="formulario">
+					<h2>Formato</h2>
+					<form id="formato">	<!--Formulario Formato-->
+						<div class="form-group">
+							<input type="hidden" class="form-control" id="codFormato">	<!--Llave Primaria-->
+
+							<label for="nomFormato">Nombre Formato</label>
+							<input type="text" class="form-control" id="nomFormato" placeholder="Ingrese el nombre del formato">
+						</div>
+					</form>
+					<div class="form-group">
+						<button type="submit" class="btn btn-outline-primary" id="desp" onclick="navPrimeroFormato()">|<</button>
+						<button type="submit" class="btn btn-outline-primary" id="desp" onclick="navAtrasFormato()"><</button>
+						<button type="submit" class="btn btn-outline-primary" id="desp" onclick="navAdelanteFormato()">></button>
+						<button type="submit" class="btn btn-outline-primary" id="desp" onclick="navUltimoFormato()">>|</button>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-outline-primary" id="opc1" onclick="crearFormato()">Crear</button>
+						<button type="submit" class="btn btn-outline-success" id="opc2">Modificar</button>
+						<button type="submit" class="btn btn-outline-danger" id="opc3">Eliminar</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-md-3">
+				<div class="formulario">
+					<h2>Compañía</h2>
+					<form id="compania">	<!--Formulario Compañía-->
+						<div class="form-group">
+							<input type="hidden" class="form-control" id="codCompania">	<!--Llave Primaria-->
+
+							<label for="nomCompania">Nombre Compañía</label>
+							<input type="text" class="form-control" id="nomCompania" placeholder="Ingrese el nombre de la compañía">
+
+							<label for="dirCompania">Dirección</label>
+							<input type="text" class="form-control" id="dirCompania" placeholder="Ingrese la dirección">
+						</div>
+					</form>
+					<div class="form-group">
+						<button type="submit" class="btn btn-outline-primary" id="desp" onclick="navPrimeroCompania()">|<</button>
+						<button type="submit" class="btn btn-outline-primary" id="desp" onclick="navAtrasCompania()"><</button>
+						<button type="submit" class="btn btn-outline-primary" id="desp" onclick="navAdelanteCompania()">></button>
+						<button type="submit" class="btn btn-outline-primary" id="desp" onclick="navUltimoCompania()">>|</button>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-outline-primary" id="opc1" onclick="crearCompania()">Crear</button>
+						<button type="submit" class="btn btn-outline-success" id="opc2">Modificar</button>
+						<button type="submit" class="btn btn-outline-danger" id="opc3">Eliminar</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-md-3">
+				<div class="formulario">
+					<h2>Intérprete</h2>
+					<form id="interprete">	<!--Formulario Intérprete-->
+						<div class="form-group">
+							<input type="hidden" class="form-control" id="codInterprete">	<!--Llave Primaria-->
+
+							<label for="nomInterprete">Nombre Intérprete</label>
+							<input type="text" class="form-control" id="nomInterprete" placeholder="Ingrese el nombre del intérprete">
+
+							<label for="descInterprete">Descripción</label>
+							<input type="text" class="form-control" id="descInterprete" placeholder="Ingrese la descripción">
+						</div>
+					</form>
+					<div class="form-group">
+						<button type="submit" class="btn btn-outline-primary" id="desp" onclick="navPrimeroInterprete()">|<</button>
+						<button type="submit" class="btn btn-outline-primary" id="desp" onclick="navAtrasInterprete()"><</button>
+						<button type="submit" class="btn btn-outline-primary" id="desp" onclick="navAdelanteInterprete()">></button>
+						<button type="submit" class="btn btn-outline-primary" id="desp" onclick="navUltimoInterprete()">>|</button>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-outline-primary" id="opc1" onclick="crearInterprete()">Crear</button>
+						<button type="submit" class="btn btn-outline-success" id="opc2">Modificar</button>
+						<button type="submit" class="btn btn-outline-danger" id="opc3">Eliminar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-12 col-sm-6 col-md-3">
+				<div class="formulario">
+					<h2>Grabación</h2>
+					<form id="grabacion">	<!--Formulario Grabación-->
+						<div class="form-group">
+							<input type="hidden" class="form-control" id="codGrabacion">	<!--Llave Primaria-->
+
+							<label for="titulo">Título</label>
+							<input type="text" class="form-control" id="titulo" placeholder="Ingrese el título">
+
+							<label for="numTemas">Número de Temas</label>
+							<input type="number" class="form-control" id="numTemas" placeholder="Ingrese el número de temas">
+
+							<label for="descripcion">Descripción</label>
+							<input type="text" class="form-control" id="descTema" placeholder="Ingrese la descripción">
+
+							<label for="fecha">Fecha</label>
+							<input type="date" class="form-control" id="fecha" placeholder="Ingrese la fecha">
+							
+							<label for="Foreign Key">Categoría</label>
+							<select class="form-control" id="codCategoriaG">
+								<option value="" selected disabled hidden>Seleccione la categoría</option>
+							</select>
+
+							<label for="Foreing Key">Compañía</label>
+							<select class="form-control" id="codCompaniaG">
+								<option value="" selected disabled hidden>Seleccione la compañía</option>
+							</select>					
+
+							<label for="Foreing Key">Formato</label>
+							<select class="form-control" id="codFormatoG">
+								<option value="" selected disabled hidden>Seleccione el formato</option>
+							</select>
+
+							<label for="estado">Estado</label>
+							<input type="text" class="form-control" id="estado" placeholder="Ingrese el estado de la grabación">
+						</div>
+					</form>
+					<div class="form-group">
+						<button type="submit" class="btn btn-outline-primary" id="desp" onclick="navPrimeroGrabacion()">|<</button>
+						<button type="submit" class="btn btn-outline-primary" id="desp" onclick="navAtrasGrabacion()"><</button>
+						<button type="submit" class="btn btn-outline-primary" id="desp" onclick="navAdelanteGrabacion()">></button>
+						<button type="submit" class="btn btn-outline-primary" id="desp" onclick="navUltimoGrabacion()">>|</button>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-outline-primary" id="opc1" onclick="crearGrabacion()">Crear</button>
+						<button type="submit" class="btn btn-outline-success" id="opc2">Modificar</button>
+						<button type="submit" class="btn btn-outline-danger" id="opc3">Eliminar</button>
+					</div>
+				</div>
+			</div>
+			<div class="col-12 col-sm-6 col-md-3">
+				<div class="formulario">
+					<h2>Intérprete Grabación</h2>
+					<form id="interpreteGrabacion">	<!--Formulario Intérprete Grabación-->
+						<div class="form-group">
+							<label for="Foreing Key">Grabación</label>
+							<select class="form-control" id="interpreteGrabacion">
+								<option value="" selected disabled hidden>Seleccione la grabación</option>
+							</select>
+
+							<label for="Foreing Key">Intérprete</label>
+							<select class="form-control" id="nombreInterpreteGrabacion">
+								<option value="" selected disabled hidden>Seleccione el intérprete</option>
+							</select>
+						</div>
+					</form>
+					<div class="form-group">
+						<button type="submit" class="btn btn-outline-primary" id="desp" onclick="navPrimeroInterpreteGrabacion()">|<</button>
+						<button type="submit" class="btn btn-outline-primary" id="desp" onclick="navAtrasInterpreteGrabacion()"><</button>
+						<button type="submit" class="btn btn-outline-primary" id="desp" onclick="navAdelanteInterpreteGrabacion()">></button>
+						<button type="submit" class="btn btn-outline-primary" id="desp" onclick="navUltimoInterpreteGrabacion()">>|</button>
+					</div>
+					<div class="form-group">
+						<button type="submit" class="btn btn-outline-primary" id="opc1" onclick="crearInterpreteGrabacion()">Crear</button>
+						<button type="submit" class="btn btn-outline-success" id="opc2">Modificar</button>
+						<button type="submit" class="btn btn-outline-danger" id="opc3">Eliminar</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="areaDatos"></div>
+	<h5>Creado por: Axel Ramses, Laura Cediel y Esteban Trujillo</h5>
+	</div>
+
+	<script src="js/json.js"></script>
+	<script src="js/vista.js"></script>
+	<script src="js/modelo.js"></script>
+	<script src="js/controlador.js"></script>
+</body>
+</html>
